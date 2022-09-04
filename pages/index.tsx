@@ -17,32 +17,23 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
+          <div className={styles.title}>
           <p>{data && data.result[0]}</p>
           <p>{data && data.result[1]}</p>
           <p>{data && data.result[2]}</p>
+          </div>
 
-        <p className={styles.title} onClick={(e) => mutate()}>
-        🔃
-        </p>
+        <p className={styles.refresh} onClick={(e) => mutate()}>🔃</p>
         
         <TwitterShareButton url="junrenka-randomizer.vercel.app" title={data && data.result[0] + '\n' + data.result[1] + '\n' + data.result[2]}>
           <TwitterIcon size={50} round={true} className="mt-2" />
         </TwitterShareButton>
+        <p className={styles.center}>
+          Powered by <a href="https://nextjs.org/">Next.js</a> / <a href="https://vercel.com">Vercel</a>
+          <br/>
+          <a href="https://github.com/yude/junrenka-randomizer">GitHub</a>
+          </p>
       </main>
-
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
     </div>
   )
 }
