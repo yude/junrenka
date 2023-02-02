@@ -11,7 +11,7 @@ export default function handler(
 ) {
   let words: string[] = ["大親友", "パスタ", "連れ", "彼女", "俺", "女", "タイプ"];
   const randomized: string[] = getWordArray(words);
-  const message: string[] = [randomized[0] + "の" + randomized[1] + "の" + randomized[2], "美味しい" + randomized[3] + "作ったお前", "家庭的な" + randomized[4] + "の" + randomized[5] + "が" + randomized[6] + "　一目惚れ"]
+  const message: string[] = [randomized[0] + "の" + randomized[1] + "の" + randomized[2], "美味しい" + randomized[3] + "作ったお前", "家庭的な" + randomized[4] + "が" + randomized[5] + "の" + randomized[6] + "　一目惚れ"]
   res.status(200).json({ result: message })
 }
 
